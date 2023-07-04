@@ -1,6 +1,6 @@
 {
-    "name": "exercise_1",
-    "short_name": "exercise_1",
+    "name": "flutter_learning",
+    "short_name": "flutter_learning",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
