@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/books_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -39,7 +40,12 @@ class LoginPage extends StatelessWidget {
                   height: 16,
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BooksPage()));
+                  },
                   style: OutlinedButton.styleFrom(
                     minimumSize: const Size(200.0, 45.0),
                     foregroundColor: primaryColor,
@@ -67,6 +73,5 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
