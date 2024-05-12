@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/book_page.dart';
 
-Widget bookCard(String imagePath, String title, String synopsis) => Column(
+Widget bookCard(String imagePath, String title, String synopsis, BuildContext context) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          height: 250.0,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(imagePath),
-              fit: BoxFit.cover,
+        InkWell(
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => BookPage(bookTitle: title, bookImage: imagePath)));
+          },
+          borderRadius: BorderRadius.circular(16.0),
+          child: Container(
+            height: 250.0,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(imagePath),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: BorderRadius.circular(16.0),
             ),
-            borderRadius: BorderRadius.circular(16.0),
           ),
         ),
         const SizedBox(height: 12.0),

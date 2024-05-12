@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/books_page.dart';
+import 'package:flutter_learning/collection_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const BooksPage()));
+                            builder: (context) => const CollectionPage()));
                   },
                   style: OutlinedButton.styleFrom(
                     minimumSize: const Size(200.0, 45.0),
