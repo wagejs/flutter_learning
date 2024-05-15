@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/collection_page.dart';
+import 'package:flutter_learning/lesson_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const CollectionPage()));
+                            builder: (context) => const LessonPage()));
                   },
                   style: OutlinedButton.styleFrom(
                     minimumSize: const Size(200.0, 45.0),
@@ -65,7 +65,10 @@ class LoginPage extends StatelessWidget {
                       backgroundColor: primaryColor,
                       minimumSize: const Size(200.0, 50.0),
                       shadowColor: const Color(0xFFFFFFFF)),
-                  child: const Text("Register"),
+                  child: const Text(
+                    "Register",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 )
               ],
             ),
